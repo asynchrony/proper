@@ -93,3 +93,11 @@ task :retest => [:compile] do
 	FileUtils.rm_rf('.eunit')
 	rebar 'eunit'
 end
+
+desc "doc clean"
+task :doc_clean do
+	FileUtils.rm_rf(FileList["doc/*.html"])
+	FileUtils.rm_rf(FileList["doc/stylesheet.css"])
+	FileUtils.rm_rf(FileList["doc/erlang.png"])
+	FileUtils.rm_rf(FileList["doc/edoc-info"])
+end
