@@ -67,6 +67,11 @@ task :eunit => [:compile] do
 	rebar 'eunit'
 end
 
+desc "Tests"
+task :test => [:compile] do
+	rebar 'eunit'
+end
+
 desc "Doc"
 task :make_doc do
 	`make_doc`
